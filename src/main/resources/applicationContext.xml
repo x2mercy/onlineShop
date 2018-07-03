@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<http>
+<intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
+<form-login login-page="/login" authentication-failure-url="/login?error=1" default-target-url="/index"/>
+<logout />
+<security:authentication-provider>
+    <security:user-service>
+        <security:user name="stefanlaioffer@gmail.com" 
+               password="123456" authorities="ROLE_ADMIN" />
+    </security:user-service>
+</security:authentication-provider>
+
+</http>
+
